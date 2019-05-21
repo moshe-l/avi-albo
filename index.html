@@ -49,6 +49,19 @@
 <link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
 <body>
   
+   <script>
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
  
   <app-root></app-root>
 
@@ -90,5 +103,5 @@ function backToTop()
 
   <!-- Template Main Javascript File -->
   <!-- <script src="assets/js/main.js"></script> -->
-<script type="text/javascript" src="runtime.26209474bfa8dc87a77c.js"></script><script type="text/javascript" src="es2015-polyfills.f6643d3e9643d1cafde5.js" nomodule></script><script type="text/javascript" src="polyfills.18edccc3f67751df9f0c.js"></script><script type="text/javascript" src="main.ccd19f23afa6e50cdfd6.js"></script></body>
+<script type="text/javascript" src="runtime.26209474bfa8dc87a77c.js"></script><script type="text/javascript" src="es2015-polyfills.f6643d3e9643d1cafde5.js" nomodule></script><script type="text/javascript" src="polyfills.18edccc3f67751df9f0c.js"></script><script type="text/javascript" src="main.d95ecd08806fb6e89c72.js"></script></body>
 </html>
